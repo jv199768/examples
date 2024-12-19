@@ -147,7 +147,8 @@ confidential-high   0/1     Pending   0          2m51s
 pod-affinity        0/1     Pending   0          2m51s
 tolerations         1/1     Running   0          4s
 ----
-
+#
+Update 'minikube' with 'node01' for running Minikube on Rancher on the killercoda platform. 
 === More Information
 
 * https://oreil.ly/N-iAz[Automated Placement Example]
