@@ -53,6 +53,9 @@ To access the service on Minikube, we need to start a tunnel to the VM and store
 minikube service random-generator-np --url > /tmp/random-url.txt &
 ----
 
+# curl 192.168.1.5:8080
+# curl 192.168.0.5:8080
+
 Now we can access our service with:
 
 [source, bash]
@@ -99,6 +102,7 @@ For this, jump into one of the pods with
 [source, bash]
 ----
 kubectl exec -it rg-0 -- bash
+I have no name!
 ----
 
 And then, from within the Pod, check the DNS entry for the headless Service:
@@ -106,6 +110,7 @@ And then, from within the Pod, check the DNS entry for the headless Service:
 [source, bash]
 ----
 dig SRV random-generator.default.svc.cluster.local
+I have no name!
 ----
 
 You will find all the internal IP addresses of the StatefulSet's Pod in the answer.
