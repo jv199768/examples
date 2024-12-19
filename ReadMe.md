@@ -1,0 +1,2 @@
+Are you encountering the “error: Metrics API not available” after setting up Metrics Server in your Kubernetes cluster? Metrics Server is used in Kubernetes to collect resource usage data from pods and nodes in the cluster. The metrics collected are accessed centrally via the Kubernetes API, and this allows other cluster components and users to query resource usage in the cluster. The use case can be Horizontal Pod Autoscaling.
+https://medium.com/@cloudspinx/fix-error-metrics-api-not-available-in-kubernetes-aa10766e1c2f
