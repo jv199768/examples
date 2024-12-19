@@ -15,8 +15,8 @@ spec:
     path: /tmp/example
 ---
 # Persistent Volume Claim required by our random service
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: random-generator-log
 spec:
