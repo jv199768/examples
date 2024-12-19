@@ -26,14 +26,14 @@ Assuming you are using Minikube, we can access and expose the service using the 
 
 [source, bash]
 ----
-minikube service random-generator --url > /tmp/random-url.txt &
+
 ----
 
 This command starts a tunnel in the background and writes down the access URL for the two exposed ports. We store these URLs in a text file to access the service with the following command:
 
 [source, bash]
 ----
-curl $(cat /tmp/random-url.txt)
+
 ----
 
 Now we can verify if our ambassador has been contacted with the appropriate data:
