@@ -82,6 +82,32 @@ kubectl set image deployment random-generator random-generator=k8spatterns/rando
 
 Can you spot the difference when doing the update, also concerning the downtime?
 
+# Correction - 
+
+controlplane $ kubectl describe service random-generator 
+Name:                     random-generator
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=random-generator
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.97.159.207
+IPs:                      10.97.159.207
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  32024/TCP
+Endpoints:                192.168.0.4:8080,192.168.1.7:8080,192.168.1.6:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+curl http://192.168.0.4:8080
+curl http://192.168.1.7:8080
+
+
 === More Information
 
 * https://oreil.ly/xSsID[Declarative Deployment Example]
