@@ -38,6 +38,8 @@ kubectl apply -f web-app.yml
 [source, bash]
 ----
 minikube service web-app
+# Correction:
+curl http://192.168.1.5:80 will display the webpage but ingress required
 ----
 
 If you want to test whether the pages are updated, clone the repository configured in `GIT_REPO` in a local directory, make some changes, `git commit` and `git push` (assuming that you have changed the `GIT_REPO` URL to a repo that you can write to). You should see the changes automatically propagating to your web application.
