@@ -44,6 +44,8 @@ This command starts a tunnel in the background and writes the access URLs for th
 [source, bash]
 ----
 curl -s $(cat /tmp/random-url.txt)/info | jq .
+#
+curl http://192.168.1.4:8080
 ----
 
 * Can you see how the environment variables are exposed?
